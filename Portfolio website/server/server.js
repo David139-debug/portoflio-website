@@ -13,7 +13,7 @@ const adminId = process.env.ADMIN_ID;
 connectDB();
 
 const app = express();
-app.use(cors({ origin: `${process.env.FRONTEND_URI}` }));
+app.use(cors());
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
