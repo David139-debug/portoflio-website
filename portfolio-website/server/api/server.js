@@ -1,8 +1,8 @@
 const express = require("express");
 const http = require("http");
 const mongoose = require("mongoose");
-const Message = require("./models/Message");
-const connectDB = require("./config/connectDB");
+const Message = require("../models/Message");
+const connectDB = require("../config/connectDB");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
