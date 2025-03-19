@@ -42,7 +42,7 @@ const Chat = () => {
     
         setUserId(storedUserId);
 
-        socketRef.current = io("http://localhost:5000", { query: { userId: storedUserId } });
+        socketRef.current = io(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}`, { query: { userId: storedUserId } });
 
         const playNotificationSound = () => {
             const audio = new Audio("/notificationSound.mp3");
@@ -69,7 +69,7 @@ const Chat = () => {
         if (userId) {
             const handleMsg = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:5000/get/${userId}`);
+                    const response = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/get/${userId}`);
                     const data: Message[] = response.data;
                     setMessages(data);
                 } catch (err) {
@@ -106,7 +106,7 @@ const Chat = () => {
         };
     
         try {
-            await axios.post("http://localhost:5000/send", newMsg);
+            await axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/send`, newMsg);
             socketRef.current.emit("sendMessage", newMsg);
             setMessages(prev => [...prev, newMsg]);
     

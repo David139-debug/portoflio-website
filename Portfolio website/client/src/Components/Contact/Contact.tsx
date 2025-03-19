@@ -40,7 +40,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
 
         const { name, email, text } = formData;
 
-        axios.post("http://localhost:5000/sendMail", { name, email, text } );
+        axios.post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/sendMail`, { name, email, text } );
         alert("Email sent successfully! I will get back to you soon.");
         setFormData({
             name: "",
