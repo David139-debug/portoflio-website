@@ -28,7 +28,7 @@ app.post("/send", async (req, res) => {
         await newMsg.save();
         res.status(200).json(newMsg);
     } catch (err) {
-        res.status(400).json({ message: "Error occured"});
+        res.status(400).json({ message: "Error occurred"});
     }
 });
 
@@ -81,7 +81,7 @@ app.post("/sendMail", (req, res) => {
 
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: { origin: `${import.meta.env.FRONTEND_URI}`, methods: ["GET", "POST"] },
+    cors: { origin: `${process.env.FRONTEND_URI}`, methods: ["GET", "POST"] },
 });
 
 let users = {};
