@@ -1,0 +1,107 @@
+.contact {
+    background: linear-gradient(120deg, #1a1a2e, #16213e);
+    overflow-x: hidden;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    transform: translateX(10%);
+    opacity: 0;
+    transition: transform 1s, opacity 1s;
+}
+
+.topic {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: .5em;
+    font-size: 4rem;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.para {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 1em;
+    opacity: 0;
+    transition: .7s ease-out;
+}
+
+.form input, .form textarea {
+    font-size: 1.2rem;
+    padding: .5em;
+    width: 50%;
+    border-radius: 5px;
+    border: none;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.baloon {
+    width: 20%;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s, transform 1.5s, opacity 1.5s;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+.button {
+    padding: 1em;
+    background-color: hsl(212 100% 50%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 100%;
+    transform: translate(-5%, -20%);
+    transition: .2s ease;
+}
+
+.button:hover {
+    transform: translate(0);
+    background-color: hsl(212 100% 40%);
+}
+
+.line {
+    border: 4px solid hsl(212 100% 50%);
+    margin: 0;
+    width: 0%;
+    opacity: 0;
+    transition: width 2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.5s;
+    overflow: hidden;
+}
+
+.animateTopic {
+    opacity: 1;
+}
+
+.animateForm {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.animateLine {
+    width: 100%;
+    opacity: 1;
+}
+
+.contact textarea {
+    height: 200px;
+}
+
+@media (max-width: 544px) {
+    .baloon {
+        width: 50%;
+    }
+}

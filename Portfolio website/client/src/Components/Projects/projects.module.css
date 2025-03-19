@@ -1,0 +1,202 @@
+.projects {
+    background-color: #0A2540;
+    padding: 0 5em;
+    overflow-x: hidden;
+}
+
+.topic {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: .5em;
+    font-size: 4rem;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.projectName {
+    color: white;
+}
+
+.functions {
+    color: white;
+    font-style: italic;
+}
+
+.functions span {
+    color: hsl(212 100% 70%);
+    font-style: normal;
+}
+
+.about {
+    color: white;
+    width: 70%;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    padding: .5em;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    transform: translateX(20%);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s;
+}
+
+.demo {
+    margin: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.techStack {
+    color: white;
+    margin: 2em 0;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.techStack span {
+    background-color: gray;
+    padding: .5em;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.baloon {
+    width: 25%;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+.button {
+    padding: 1em;
+    background-color: hsl(212 100% 50%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    width: 100%;
+    transform: translate(-5%, -20%);
+    transition: .2s ease;
+}
+
+.button:hover {
+    transform: translate(0);
+    background-color: hsl(212 100% 40%);
+}
+
+.line {
+    border: 4px solid hsl(212 100% 50%);
+    margin: 0;
+    width: 0%;
+    opacity: 0;
+    transition: width 2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.5s;
+    overflow-x: hidden;
+}
+
+.animateLine {
+    width: 100vw;
+    opacity: 1;
+    width: calc(100% + 10em);
+    margin-left: -5em;
+    margin-right: -5em;
+}
+
+.animateTopic {
+    opacity: 1;
+}
+
+.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@media (max-width: 1440px) {
+    .baloon {
+        width: 40%;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .demo {
+        margin-left: 4em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .baloon {
+        width: 40%;
+    }
+
+    .about {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .baloon {
+        width: 50%;
+    }
+
+    .about {
+        width: 100%;
+    }
+
+    .demo {
+        display: none;
+    }
+
+    .project {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 544px) {
+    .baloon {
+        width: 50%;
+    }
+
+    .projects {
+        padding: 0;
+    }
+}
+
+@media (max-width: 462px) {
+    .baloon {
+        width: 40%;
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .baloon {
+        width: 100%;
+    }
+
+    .projects {
+        padding: 0;
+    }
+}

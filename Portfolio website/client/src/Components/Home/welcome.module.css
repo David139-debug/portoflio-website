@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    background: linear-gradient(120deg, #1a1a2e, #16213e);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 2rem;
+    padding: 0 5em;
+}
+
+.container {
+    width: 100%;
+    padding-left: 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: hsl(0, 0%, 95%);
+}
+
+.name {
+    color: hsl(212 100% 50%);
+}
+
+.firstH1,
+.secondH1 {
+    margin-bottom: 1em;
+    font-weight: bold;
+    font-size: 3.5rem;
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(-10%);
+}
+
+.h1Loaded {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.baloon {
+    width: 300px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s, opacity 1.5s, transform 1.5s;
+    border: 2px solid white;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(40%);
+}
+
+.btn {
+    transform: translate(-5%, -20%);
+    padding: .5em;
+    border: none;
+    transition: .2s ease;
+    color: white;
+    font-weight: bold;
+    background-color: hsl(212 100% 50%);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.btnLoaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn:hover {
+    transform: translate(0);
+    background-color: hsl(212 100% 40%);
+}
+
+.myBtns {
+    display: flex;
+    gap: 3em;
+}
+
+@media (max-width: 576px) {
+    .main {
+        padding: 0;
+    }
+
+    .firstH1,
+    .secondH1 {
+        font-size: 2rem;
+    }
+
+    .baloon {
+        font-size: 1rem;
+        width: 50%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .navDiv {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 0;
+    }
+
+    .balloon {
+        width: 30%;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+    }
+
+    .navDiv {
+        display: none;
+    }
+}

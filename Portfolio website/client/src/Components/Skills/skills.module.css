@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.skills {
+    height: auto;
+    text-align: center;
+    background-color: #2E2E2E;
+    overflow-x: hidden;
+}
+
+.topic {
+    color: white;
+    padding: .5em 0;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-top: .5em;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.icon1,
+.icon2,
+.icon3 {
+    height: 4em;
+}
+
+.icon1 {
+    color: #FFA500;
+}
+
+.icon2 {
+    color: hsl(212 100% 50%);
+    transform: rotate(35deg);
+}
+
+.line {
+    border: 4px solid hsl(212 100% 50%);
+    margin: 0;
+    width: 0%;
+    opacity: 0;
+    transition: width 2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.5s;
+    overflow-x: hidden;
+}
+
+.animateLine {
+    width: 100%;
+    opacity: 1;
+}
+
+.animateTopic {
+    opacity: 1;
+}
+
+.card {
+    background-color: hsl(212 100% 30%);
+    border-radius: 50px;
+    transition: .2s ease, opacity 1s !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #003366, #0077cc);
+    opacity: 0;
+}
+
+.animationCards {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.topicAndIcon {
+    border-bottom: 2.5px solid #00AFFF;
+}
+
+.languageIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 3em;
+}
+
+.languageIcons p {
+    color: white;
+    font-weight: 500;
+    margin-top: .5em;
+}
