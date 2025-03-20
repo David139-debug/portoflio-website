@@ -36,19 +36,20 @@ app.get("/get/:id", async (req, res) => {
     try {
         const id = req.params.id;
 
-        const messages = id === adminId
-            ? await Message.find({
-                $or: [{ sender: adminId }, { receiver: adminId }]
-            }).sort({ time: 1})
-            : await Message.find({
-                $or: [{ sender: id }, { receiver: adminId }, { sender: adminId }, { receiver: id }]
-            }).sort({ time: 1})
+        const messages = await Message.find({
+            $or: [
+                { sender: id, receiver: adminId },
+                { sender: adminId, receiver: id }
+            ]
+        }).sort({ time: 1 });
+
         res.status(200).json(messages);
     } catch (err) {
         console.error(err);
         res.status(400).json({ message: "Error occurred while fetching messages" });
     }
 });
+
 
 const transporter = nodemailer.createTransport({
     service: "gmail",
