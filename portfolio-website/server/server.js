@@ -36,17 +36,20 @@ app.get("/get/:id", async (req, res) => {
     try {
         const id = req.params.id;
 
-        const messages = id === adminId
-            ? await Message.find({
-                $or: [{ sender: adminId }, { receiver: adminId }]
-            }).sort({ time: 1})
-            : await Message.find({
-                $or: [{ sender: id }, { receiver: adminId }, { sender: adminId }, { receiver: id }]
-            }).sort({ time: 1})
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ message: "Invalid user ID format" });
+        }
+
+        const filter = id === adminId
+            ? { $or: [{ sender: adminId }, { receiver: adminId }] }
+            : { $or: [{ sender: id, receiver: adminId }, { sender: adminId, receiver: id }] };
+
+        const messages = await Message.find(filter).sort({ time: 1 });
+
         res.status(200).json(messages);
     } catch (err) {
         console.error(err);
-        res.status(400).json({ message: "Error occurred while fetching messages" });
+        res.status(500).json({ message: "Error occurred while fetching messages" });
     }
 });
 
