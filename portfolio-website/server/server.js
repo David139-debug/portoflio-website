@@ -35,17 +35,14 @@ app.post("/send", async (req, res) => {
 app.get("/get/:id", async (req, res) => {
     try {
         const id = req.params.id;
-
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({ message: "Invalid user ID format" });
-        }
-
+        
+        
+        
         const filter = id === adminId
             ? { $or: [{ sender: adminId }, { receiver: adminId }] }
             : { $or: [{ sender: id, receiver: adminId }, { sender: adminId, receiver: id }] };
 
         const messages = await Message.find(filter).sort({ time: 1 });
-
         res.status(200).json(messages);
     } catch (err) {
         console.error(err);
