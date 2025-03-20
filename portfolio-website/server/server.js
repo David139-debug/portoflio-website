@@ -35,9 +35,7 @@ app.post("/send", async (req, res) => {
 app.get("/get/:id", async (req, res) => {
     try {
         const id = req.params.id;
-        
-        
-        
+         
         const filter = id === adminId
             ? { $or: [{ sender: adminId }, { receiver: adminId }] }
             : { $or: [{ sender: id, receiver: adminId }, { sender: adminId, receiver: id }] };
@@ -146,6 +144,7 @@ io.on("connection", (socket) => {
     });
 
     socket.on("disconnect", () => {
+        delete users[userId];
         userId === adminId ? isAdminActive = false : "";
         io.to(users[adminId]).emit("updateUsers", Object.keys(users));
     });

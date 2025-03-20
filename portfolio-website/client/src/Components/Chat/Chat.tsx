@@ -164,7 +164,7 @@ const Chat = () => {
                  <select onChange={handleUserChange} value={selectedUser}>
                     <option value="">Select user</option>
                     {users.map((user, index) => (
-                        <option key={index} value={user}>User {index + 1} {userId}</option>
+                        <option key={index} value={user}>User {index + 1}</option>
                     ))}
                  </select>
                  : "Chatbox"}

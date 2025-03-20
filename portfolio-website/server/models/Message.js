@@ -19,6 +19,6 @@ const MessageSchema = Schema({
     }
 });
 
-MessageSchema.index({ time: 1 }, { expireAfterSeconds: 86400 });
+MessageSchema.index({ time: 1 }, { expireAfterSeconds: 259200 });
 
 module.exports = mongoose.model("Message", MessageSchema);
