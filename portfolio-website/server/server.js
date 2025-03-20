@@ -146,7 +146,6 @@ io.on("connection", (socket) => {
     });
 
     socket.on("disconnect", () => {
-        delete users[userId];
         userId === adminId ? isAdminActive = false : "";
         io.to(users[adminId]).emit("updateUsers", Object.keys(users));
     });
