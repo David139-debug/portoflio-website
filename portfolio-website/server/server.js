@@ -111,6 +111,7 @@ io.on("connection", (socket) => {
     userId === adminId ? isAdminActive = true : "";
 
     users[userId] = socket.id;
+    delete users;
 
     if (users[adminId]) {
         io.to(users[adminId]).emit("updateUsers", Object.keys(users));
