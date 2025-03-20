@@ -144,9 +144,16 @@ io.on("connection", (socket) => {
     });
 
     socket.on("disconnect", () => {
-        delete users[userId];
-        userId === adminId ? isAdminActive = false : "";
-        io.to(users[adminId]).emit("updateUsers", Object.keys(users));
+        if (userId === adminId) {
+            isAdminActive = false;
+        }
+    
+        setTimeout(() => {
+            if (!users[userId]) {
+                delete users[userId];
+                io.to(users[adminId]).emit("updateUsers", Object.keys(users));
+            }
+        }, 86400000);
     });
 });
 
