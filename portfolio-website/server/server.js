@@ -84,10 +84,10 @@ const io = new Server(server, {
 
 let users = {};
 let isAdminActive = false;
-let hasSentMessage = {};
 
 io.on("connection", (socket) => {
     let userId = socket.handshake.query.userId;
+    console.log(users);
     if (!userId) return;
  
     if (userId !== process.env.ADMIN_ID) {
@@ -110,7 +110,6 @@ io.on("connection", (socket) => {
     userId === adminId ? isAdminActive = true : "";
 
     users[userId] = socket.id;
-    hasSentMessage[userId] = false;
 
     if (users[adminId]) {
         io.to(users[adminId]).emit("updateUsers", Object.keys(users));
@@ -119,12 +118,9 @@ io.on("connection", (socket) => {
     socket.on("sendMessage", async (msg) => {
         try {
             const receiverSocketId = users[msg.receiver];
-            hasSentMessage = true;
         if (receiverSocketId) {
             io.to(receiverSocketId).emit("receiveMessage", msg);
         }
-
-        hasSentMessage[userId] = true;
 
         if (!isAdminActive) {
             const mailOptions = {
@@ -152,22 +148,13 @@ io.on("connection", (socket) => {
         if (userId === adminId) {
             isAdminActive = false;
         }
-
+    
         setTimeout(() => {
-            if (!users[userId]) return;
-
-            if (!hasSentMessage[userId]) {
+            if (!users[userId]) {
                 delete users[userId];
-                delete hasSentMessage[userId];
-            } else {
-                setTimeout(() => {
-                    delete users[userId];
-                    delete hasSentMessage[userId];
-                }, 43200000);
+                io.to(users[adminId]).emit("updateUsers", Object.keys(users));
             }
-
-            io.to(users[adminId]).emit("updateUsers", Object.keys(users));
-        }, 1000);
+        }, 86400000);
     });
 });
 
