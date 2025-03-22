@@ -144,7 +144,6 @@ io.on("connection", (socket) => {
     });
 
     socket.on("disconnect", () => {
-        delete users[userId];
         if (userId === adminId) {
             isAdminActive = false;
         }
