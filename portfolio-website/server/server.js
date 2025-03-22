@@ -58,6 +58,12 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+const isBot = (userAgent) => {
+    if (!userAgent) return true;
+    const botPatterns = [/bot/i, /crawl/i, /spider/i, /Googlebot/i, /Bingbot/i, /Yahoo/i, /Slurp/i, /DuckDuckGo/i, /Baiduspider/i, /Yandex/i, /Sogou/i];
+    return botPatterns.some(pattern => pattern.test(userAgent));
+};
+
 app.post("/sendMail", (req, res) => {
     const { name, email, text } = req.body;
     const mailOptions = {
@@ -87,8 +93,9 @@ let isAdminActive = false;
 
 io.on("connection", (socket) => {
     let userId = socket.handshake.query.userId;
-    console.log(users);
-    if (!userId) return;
+    let userAgent = socket.handshake.headers['user-agent'];
+
+    if (!userId || isBot(userAgent)) return;
  
     if (userId !== process.env.ADMIN_ID) {
         const mailOptions = {
