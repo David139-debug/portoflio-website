@@ -90,29 +90,13 @@ const io = new Server(server, {
 
 let users = {};
 let isAdminActive = false;
+let userHasSentMessage = {};
 
 io.on("connection", (socket) => {
     let userId = socket.handshake.query.userId;
     let userAgent = socket.handshake.headers['user-agent'];
 
     if (!userId || isBot(userAgent)) return;
- 
-    if (userId !== process.env.ADMIN_ID) {
-        const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: process.env.ADMIN_EMAIL,
-            subject: "Somebody entered to your website!",
-            text: ""
-        };
-
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error("Error occurred", error);
-            } else {
-                console.log("Email sent!");
-            }
-        })
-    }
 
     userId === adminId ? isAdminActive = true : "";
 
@@ -125,6 +109,7 @@ io.on("connection", (socket) => {
     socket.on("sendMessage", async (msg) => {
         try {
             const receiverSocketId = users[msg.receiver];
+            userHasSentMessage[userId] = true;
         if (receiverSocketId) {
             io.to(receiverSocketId).emit("receiveMessage", msg);
         }
@@ -155,13 +140,17 @@ io.on("connection", (socket) => {
         if (userId === adminId) {
             isAdminActive = false;
         }
-    
-        setTimeout(() => {
-            if (!users[userId]) {
+        if (userHasSentMessage[userId] === true) {
+            console.log("timeout")
+            setTimeout(() => {
                 delete users[userId];
                 io.to(users[adminId]).emit("updateUsers", Object.keys(users));
-            }
-        }, 86400000);
+            }, 43200000)
+        } else {
+            console.log("ide dalje")
+            delete users[userId];
+            io.to(users[adminId]).emit("updateUsers", Object.keys(users));
+        }
     });
 });
 
