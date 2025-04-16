@@ -39,6 +39,41 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
             <h1 className={`${styles.topic} ${animate ? styles.animateTopic : ""}`}>Projects</h1>
             <article className={`${styles.project} ${animate ? styles.animate : ""}`}>
                 <div className={styles.info}>
+                    <h2 className={styles.projectName}>Real Estate Agency</h2>
+                    <div className={styles.techStack}>
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                        <span>MongoDB</span>
+                        <span>Rest API</span>
+                        <span>TypeScript</span>
+                    </div>
+                    <div className={styles.functions}>
+                        <p><span>Functions: </span> JWT authorization, Filtering, Showing Details, Adding Properties, Editing Profile, Roles.</p>
+                    </div>
+                    <div className={styles.about}>
+                        <p>
+                            This project is all about find perfect property that suits You and that You can buy.
+                            You can contact Agent, see details about property and also if You are agent, you can 
+                            add new property.
+                        </p>
+                    </div>
+                    <div className={styles.buttons}>
+                    <div className={styles.baloon}>
+                        <a href="https://todo-app-project-ds0f.onrender.com" target="_blank"><button className={styles.button}>Live project</button></a>
+                    </div>
+                    <div className={styles.baloon}>
+                        <a href="https://github.com/David139-debug/Todo-App-Project" target="_blank"><button className={styles.button}>Source code</button></a>
+                    </div>
+                </div>
+                </div>
+                <div className={styles.demo}>
+                    <ReactPlayer className={styles.video} width={playerSize.width} height={playerSize.height} url="https://www.youtube.com/watch?v=hcIaF-nNgQw" controls />
+                </div>
+            </article>
+
+            <article className={`${styles.project} ${animate ? styles.animate : ""}`}>
+                <div className={styles.info}>
                     <h2 className={styles.projectName}>Advanced To-Do-App</h2>
                     <div className={styles.techStack}>
                         <span>React</span>
@@ -48,7 +83,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                         <span>Rest API</span>
                     </div>
                     <div className={styles.functions}>
-                        <p><span>Functions: </span> JWT authorization, CRUD operations, filtering, marking prioritys.</p>
+                        <p><span>Functions: </span> JWT authorization, CRUD operations, Filtering, Marking prioritys.</p>
                     </div>
                     <div className={styles.about}>
                         <p>This is my first bigger project ever made.
