@@ -31,6 +31,7 @@ const Welcome = () => {
                     <h1 className={`${styles.firstH1} ${showText ? styles.h1Loaded : ""}`}>Hi, I am <span className={styles.name}>David</span>.</h1>
                     <h1 className={`${styles.secondH1} ${showText ? styles.h1Loaded : ""}`}>Front-End & Full-Stack <span className={styles.name}>developer</span>.</h1>
                     <div className={`${styles.baloon} ${showButton ? styles.btnLoaded : ""}`}><button className={styles.btn} onClick={handleClick}>More about me</button></div>
+                    <div className={`${styles.baloon} ${showButton ? styles.btnLoaded : ""}`}><button className={styles.btn} onClick={handleClick}>Contact me</button></div>
                     <Chat />
                 </div>
             </div>
