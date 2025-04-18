@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
 import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, ReduxOriginal } from 'devicons-react';
 import { VisualstudioPlain, GithubOriginal, NetlifyOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
-import { SiJest } from 'react-icons/si';
+import { SiRender } from "react-icons/si";
 import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal, PostgresqlOriginal } from 'devicons-react';
 import { forwardRef, useEffect, useState } from "react";
 
@@ -120,18 +120,13 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     </div>
 
                                     <div>
-                                        <NetlifyOriginal size={35} />
-                                        <p>Netlify</p>
+                                        <SiRender size={35} />
+                                        <p>Render</p>
                                     </div>
 
                                     <div>
                                         <PostmanOriginal size={35} />
                                         <p>Postman</p>
-                                    </div>
-
-                                    <div>
-                                        <SiJest size={35} color="red" />
-                                        <p>Jest</p>
                                     </div>
                                 </div>
                         </div>
@@ -167,11 +162,6 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                 <div>
                                     <MongooseOriginal size={35} />
                                     <p>Mongoose</p>
-                                </div>
-
-                                <div>
-                                    <PostgresqlOriginal size={35} />
-                                    <p>PostgreSQL</p>
                                 </div>
                             </div>
                         </div>
