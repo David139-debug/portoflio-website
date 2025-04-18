@@ -62,7 +62,7 @@ const Navbar = ({ projectRef, skillsRef, contactRef }: NavbarProps) => {
                                 <p>Interactive To-Do application that can be used for completing important tasks with many functionalities!</p>
                             </div>
 
-                            <div className={styles.content}>
+                            <div className={styles.content} onClick={handleClick}>
                                 <FontAwesomeIcon icon={faHouse} className={styles.icon} />
                                 <h1>Real-estate agency</h1>
                                 <p>Real estate agency website where users can look for estates on sale and decided what is best for them!</p>
