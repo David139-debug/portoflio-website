@@ -60,10 +60,10 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                     <div className={styles.buttons}>
                     <div className={styles.baloon}>
-                        <a href="https://todo-app-project-ds0f.onrender.com" target="_blank"><button className={styles.button}>Live project</button></a>
+                        <a href="https://real-estate-agency-frontend.onrender.com/" target="_blank"><button className={styles.button}>Live project</button></a>
                     </div>
                     <div className={styles.baloon}>
-                        <a href="https://github.com/David139-debug/Todo-App-Project" target="_blank"><button className={styles.button}>Source code</button></a>
+                        <a href="https://github.com/David139-debug/Real-Estate-Agency-Project" target="_blank"><button className={styles.button}>Source code</button></a>
                     </div>
                 </div>
                 </div>
