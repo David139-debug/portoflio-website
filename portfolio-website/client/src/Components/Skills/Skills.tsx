@@ -120,7 +120,7 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     </div>
 
                                     <div>
-                                        <SiRender size={35} />
+                                        <SiRender style={{ color: "white" }} size={35} />
                                         <p>Render</p>
                                     </div>
 
