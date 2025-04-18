@@ -2,9 +2,9 @@ import styles from "./skills.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
 import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, ReduxOriginal } from 'devicons-react';
-import { VisualstudioPlain, GithubOriginal, NetlifyOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
+import { VisualstudioPlain, GithubOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
 import { SiRender } from "react-icons/si";
-import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal, PostgresqlOriginal } from 'devicons-react';
+import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal } from 'devicons-react';
 import { forwardRef, useEffect, useState } from "react";
 
 const Skills = forwardRef<HTMLElement>((_, ref) => {
