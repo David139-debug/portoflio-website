@@ -68,7 +68,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                 </div>
                 </div>
                 <div className={styles.demo}>
-                    <ReactPlayer className={styles.video} width={playerSize.width} height={playerSize.height} url="https://www.youtube.com/watch?v=hcIaF-nNgQw" controls />
+                    <ReactPlayer className={styles.video} width={playerSize.width} height={playerSize.height} url="https://youtu.be/g-zqNy3FWYs" controls />
                 </div>
             </article>
 
