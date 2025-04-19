@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./navbar.module.css"
 import { faListUl, faHouse, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { faGit, faGithub, faLinkedin, faUpwork } from "@fortawesome/free-brands-svg-icons";
 
 interface NavbarProps {
     projectRef: React.RefObject<HTMLElement | null>;
@@ -47,6 +48,9 @@ const Navbar = ({ projectRef, skillsRef, contactRef }: NavbarProps) => {
                 <h1>David</h1>
             </div>
             <div className={styles.right}>
+                <li><a target="_blank" href="https://github.com/David139-debug"><FontAwesomeIcon className={styles.socialIcon} icon={faGithub} /></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/david-male%C5%A1evi%C4%87-587114361/"><FontAwesomeIcon className={styles.socialIcon} icon={faLinkedin} /></a></li>
+                <li><a target="_blank" href="https://www.upwork.com/freelancers/~012886fbecbe6571e0"><FontAwesomeIcon className={styles.socialIcon} icon={faUpwork} /></a></li>
                 <li><a href="#" onClick={handleSkills}>Skills</a></li>
                 <li onMouseEnter={handleHover}><a href="#">Projects <FontAwesomeIcon icon={faAngleDown}/></a>
                 </li>

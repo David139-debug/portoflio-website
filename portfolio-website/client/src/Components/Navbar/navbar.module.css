@@ -93,6 +93,10 @@
     max-height: 50vh;
 }
 
+.socialIcon {
+    height: 1.3em;
+}
+
 @media (max-width: 1323px) {
     .animated {
         max-height: 65vh;
