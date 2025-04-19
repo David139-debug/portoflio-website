@@ -54,9 +54,8 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                     <div className={styles.about}>
                         <p>
-                            This project is all about find perfect property that suits You and that You can buy.
-                            You can contact Agent, see details about property and also if You are agent, you can 
-                            add new property.
+                        This project is all about finding the perfect property that suits you and that you can buy.
+                        You can contact agents, view property details, and if you are an agent, you can also add new properties.
                         </p>
                     </div>
                     <div className={styles.buttons}>
@@ -89,9 +88,10 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                         Also, after logging in, please wait at least 25 seconds for the dashboard to load properly.</span></p>
                     </div>
                     <div className={styles.about}>
-                        <p>This is my first bigger project ever made.
-                       It is application that is used to make tasks that can be filtered and marked as priority.
-                       Every user must make his account so that everything is visible only to him.</p>
+                        <p>
+                            This is my first major project.
+                            It's an application for creating tasks that can be filtered and marked as high priority.
+                            Every user must create an account so that their data is visible only to them.</p>
                     </div>
                     <div className={styles.buttons}>
                     <div className={styles.baloon}>
