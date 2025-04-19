@@ -152,7 +152,11 @@ const About = forwardRef<HTMLElement | null>((_, ref) => {
                         </p><br />
                     </div>
 
-                    <div className={`${styles.baloon} ${animateButton ? styles.animatedBtn : ""}`}><button className={`${styles.btn}`}>CV resume</button></div>
+                    <div className={`${styles.baloon} ${animateButton ? styles.animatedBtn : ""}`}>
+                        <a href="https://drive.google.com/file/d/1PCLBAIDfjckz8xHobtp3mws204JDMdcm/view?usp=sharing">
+                            <button className={`${styles.btn}`}>CV resume</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
