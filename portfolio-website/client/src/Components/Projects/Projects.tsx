@@ -50,7 +50,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                     <div className={styles.functions}>
                         <p><span>Features: </span> JWT authorization, Filtering, Showing Details, Adding Properties, Editing Profile, Roles.</p>
-                        <p style={{ color: "white" }}>Note: <span style={{ fontStyle: "italic" }}>Please, wait for about 50 seconds after You make any API request because Render servers<br /> needs some time to wake up.</span></p>
+                        <p style={{ color: "white" }}>Note: <span style={{ fontStyle: "italic" }}>Please wait approximately 50 seconds after making any API request, as the Render server <br /> may take some time to wake up, due to the free tier limitations.</span></p>
                     </div>
                     <div className={styles.about}>
                         <p>
@@ -85,9 +85,8 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                     </div>
                     <div className={styles.functions}>
                         <p><span>Features: </span> JWT authorization, CRUD operations, Filtering, Marking prioritys.</p>
-                        <p style={{ color: "white" }}>Note: <span style={{ fontStyle: "italic" }}>Please, wait for about 50 seconds after You make any API request because Render servers<br />
-                                                             needs some time to wake up.<br />
-                                                             Also please wait at least 25 seconds after You logged in.</span></p>
+                        <p style={{ color: "white" }}>Note: <span style={{ fontStyle: "italic" }}>Please allow about 50 seconds for the server to wake up after making an API request, due to Render free tier limitations.<br />
+                        Also, after logging in, please wait at least 25 seconds for the dashboard to load properly.</span></p>
                     </div>
                     <div className={styles.about}>
                         <p>This is my first bigger project ever made.
