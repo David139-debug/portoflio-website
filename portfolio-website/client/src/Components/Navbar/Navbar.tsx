@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./navbar.module.css"
 import { faListUl, faHouse, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { faGit, faGithub, faLinkedin, faUpwork } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faUpwork } from "@fortawesome/free-brands-svg-icons";
 
 interface NavbarProps {
     projectRef: React.RefObject<HTMLElement | null>;
