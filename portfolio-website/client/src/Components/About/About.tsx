@@ -153,7 +153,7 @@ const About = forwardRef<HTMLElement | null>((_, ref) => {
                     </div>
 
                     <div className={`${styles.baloon} ${animateButton ? styles.animatedBtn : ""}`}>
-                        <a href="file:///C:/Users/korisnik/Downloads/David%20Male%C5%A1evi%C4%87%20CV%20Resume.pdf">
+                        <a href="https://drive.google.com/file/d/1b19BNAzC8lRF9x_0lQd85EYnp8tPOhMH/view?usp=sharing">
                             <button className={`${styles.btn}`}>CV resume</button>
                         </a>
                     </div>
