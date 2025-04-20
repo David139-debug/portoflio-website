@@ -31,6 +31,14 @@ Application has implemented chat feature, smooth animations and organised sectio
 ### Hosting
 * Render
 
+### Accounts
+#### Owner
+* Email: davidmalesevic55@gmail.com
+* Password: Password123
+#### Agent
+* Email: jonhyjackson@gmail.com
+* Password: Password123
+
 ## Setup 
 If you want to try my Portfolio webiste project, please feel free to clone my repository and enter following commands in your terminal:
 

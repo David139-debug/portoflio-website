@@ -133,7 +133,7 @@ const About = forwardRef<HTMLElement | null>((_, ref) => {
                         <h3 className={`${styles.about_sec_topic} ${animateTopic ? styles.animateTopic : ""}`}>Who am I?</h3>
                         <p className={`${styles.me} ${animateParagraph ? styles.animateContent : ""}`}>
                             I am David Malešević from Croatia, a country in Southeast Europe.
-                            I am a 19-year-old front-end and full-stack developer specializing in modern web applications and websites.
+                            I am a 20-year-old front-end and full-stack developer specializing in modern web applications and websites.
                         </p><br />
                     </div>
 
