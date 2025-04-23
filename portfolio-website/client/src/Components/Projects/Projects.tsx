@@ -83,7 +83,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
                         <span>Rest API</span>
                     </div>
                     <div className={styles.functions}>
-                        <p><span>Features: </span> JWT authorization, CRUD operations, Filtering, Marking prioritys.</p>
+                        <p><span>Features: </span> JWT authorization, CRUD operations, Filtering, Marking priorities.</p>
                         <p style={{ color: "white" }}>Note: <span style={{ fontStyle: "italic" }}>Please allow about 50 seconds for the server to wake up after making an API request, due to Render free tier limitations.<br />
                         Also, after logging in, please wait at least 25 seconds for the dashboard to load properly.</span></p>
                     </div>
