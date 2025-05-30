@@ -1,7 +1,7 @@
 import styles from "./skills.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
-import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, ReduxOriginal } from 'devicons-react';
+import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, ReduxOriginal, TailwindcssOriginal } from 'devicons-react';
 import { VisualstudioPlain, GithubOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
 import { SiRender } from "react-icons/si";
 import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal } from 'devicons-react';
@@ -71,6 +71,10 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     <div>
                                         <Css3Original   size={35} />
                                         <p>CSS</p>
+                                    </div>
+                                    <div>
+                                        <TailwindcssOriginal   size={35} />
+                                        <p>Tailwind CSS</p>
                                     </div>
                                     <div>
                                         <JavascriptOriginal size={35} />
