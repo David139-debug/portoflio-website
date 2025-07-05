@@ -1,10 +1,10 @@
 import styles from "./skills.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
-import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, ReduxOriginal, TailwindcssOriginal, NextjsOriginal } from 'devicons-react';
+import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, TailwindcssOriginal, NextjsOriginal, VitestOriginal } from 'devicons-react';
 import { VisualstudioPlain, GithubOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
 import { SiRender } from "react-icons/si";
-import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal } from 'devicons-react';
+import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal, PostgresqlOriginal, PrismaOriginal } from 'devicons-react';
 import { forwardRef, useEffect, useState } from "react";
 
 const Skills = forwardRef<HTMLElement>((_, ref) => {
@@ -73,10 +73,6 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                         <p>CSS</p>
                                     </div>
                                     <div>
-                                        <TailwindcssOriginal   size={35} />
-                                        <p>Tailwind CSS</p>
-                                    </div>
-                                    <div>
                                         <JavascriptOriginal size={35} />
                                         <p>JavaScript</p>
                                     </div>
@@ -89,12 +85,16 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                         <p>React</p>
                                     </div>
                                     <div>
-                                        <ReduxOriginal size={35} />
-                                        <p>Redux</p>
+                                        <TailwindcssOriginal size={35} />
+                                        <p>Tailwind CSS</p>
                                     </div>
                                     <div>
                                         <NextjsOriginal size={35} />
                                         <p>Next.js</p>
+                                    </div>
+                                    <div>
+                                        <VitestOriginal size={35} />
+                                        <p>Vitest</p>
                                     </div>
                                 </div>
                         </div>
@@ -170,6 +170,16 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                 <div>
                                     <MongooseOriginal size={35} />
                                     <p>Mongoose</p>
+                                </div>
+
+                                <div>
+                                    <PostgresqlOriginal size={35} />
+                                    <p>PostgreSQL</p>
+                                </div>
+
+                                <div>
+                                    <PrismaOriginal size={35} />
+                                    <p>Prisma ORM</p>
                                 </div>
                             </div>
                         </div>
