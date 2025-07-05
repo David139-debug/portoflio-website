@@ -85,12 +85,12 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                         <p>React</p>
                                     </div>
                                     <div>
-                                        <TailwindcssOriginal size={35} />
-                                        <p>Tailwind CSS</p>
-                                    </div>
-                                    <div>
                                         <NextjsOriginal size={35} />
                                         <p>Next.js</p>
+                                    </div>
+                                    <div>
+                                        <TailwindcssOriginal size={35} />
+                                        <p>Tailwind CSS</p>
                                     </div>
                                     <div>
                                         <VitestOriginal size={35} />
