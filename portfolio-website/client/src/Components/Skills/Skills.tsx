@@ -82,10 +82,7 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     </div>
                                     <div>
                                         <ReactOriginal size={35} />
-                                        <p>React</p>
-                                    </div>
-                                    <div>
-                                        <SiReactivex size={35} />
+                                        <p>React/React Native</p>
                                     </div>
                                     <div>
                                         <NextjsOriginal size={35} />
