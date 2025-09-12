@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
 import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, TailwindcssOriginal, NextjsOriginal, VitestOriginal } from 'devicons-react';
 import { VisualstudioPlain, GithubOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
-import { SiRender, SiReactivex } from "react-icons/si";
+import { SiRender } from "react-icons/si";
+import expo from "./img/expo.svg";
 import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal, PostgresqlOriginal, PrismaOriginal } from 'devicons-react';
 import { forwardRef, useEffect, useState } from "react";
 
@@ -82,7 +83,7 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     </div>
                                     <div>
                                         <ReactOriginal size={35} />
-                                        <p>React/React Native</p>
+                                        <p>React / React Native</p>
                                     </div>
                                     <div>
                                         <NextjsOriginal size={35} />
@@ -130,6 +131,11 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     <div>
                                         <SiRender style={{ color: "white" }} size={35} />
                                         <p>Render</p>
+                                    </div>
+
+                                    <div>
+                                        <img src={expo} alt="Expo" width={35} height={35} />
+                                        <p>Expo</p>
                                     </div>
 
                                     <div>
