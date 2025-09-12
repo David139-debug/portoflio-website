@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
 import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, TailwindcssOriginal, NextjsOriginal, VitestOriginal } from 'devicons-react';
 import { VisualstudioPlain, GithubOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
-import { SiRender } from "react-icons/si";
+import { SiRender, SiReactivex } from "react-icons/si";
 import { NodejsOriginal, ExpressOriginal, MongodbOriginal, MongooseOriginal, PostgresqlOriginal, PrismaOriginal } from 'devicons-react';
 import { forwardRef, useEffect, useState } from "react";
 
@@ -83,6 +83,9 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     <div>
                                         <ReactOriginal size={35} />
                                         <p>React</p>
+                                    </div>
+                                    <div>
+                                        <SiReactivex size={35} />
                                     </div>
                                     <div>
                                         <NextjsOriginal size={35} />
