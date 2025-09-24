@@ -1,7 +1,7 @@
 import styles from "./skills.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faGear, faServer } from "@fortawesome/free-solid-svg-icons";
-import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, TailwindcssOriginal, NextjsOriginal, VitestOriginal } from 'devicons-react';
+import { Html5Original, Css3Original, JavascriptOriginal, TypescriptOriginal, ReactOriginal, TailwindcssOriginal, NextjsOriginal, VitestOriginal, DockerOriginal } from 'devicons-react';
 import { VisualstudioPlain, GithubOriginal, PostmanOriginal, NpmOriginalWordmark } from 'devicons-react';
 import { SiRender } from "react-icons/si";
 import expo from "./img/expo.svg";
@@ -126,6 +126,11 @@ const Skills = forwardRef<HTMLElement>((_, ref) => {
                                     <div>
                                         <NpmOriginalWordmark size={35} />
                                         <p>NPM</p>
+                                    </div>
+
+                                    <div>
+                                        <DockerOriginal size={35} />
+                                        <p>Docker</p>
                                     </div>
 
                                     <div>
